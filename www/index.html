@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link rel="stylesheet" href="css/framework7.min.css">
+        <link rel="stylesheet" href="css/framework7.md.min.css">
+        <script src="js/framework7.js"></script>
+        <title>Blank App</title>
+
+          <style type="text/css">
+          	/*style of logo */
+          	.logotipo {
+          		width: 70%;
+          		margin-top: 15%;
+          		margin-bottom: 10%;	
+          	}
+    
+          	/*style of text typping cod*/
+          	.font_typ_cod {
+          		color: dimgrey;
+          		margin-bottom: 2px;
+          	}	
+
+          	/*style input cod */
+          	.border-input {
+          		height: 60px;
+          		width: 210px;
+          		border: 2px solid #7c6249;
+          		border-radius: 9px;
+          		font-size: 60px;
+          		padding-top: 5px;
+               	}
+
+      </style>
+    </head>
+    <body>
+    
+
+ 
+     <center>
+     		   <center>
+	     <img src="img/logotipo.png" class="logotipo">
+	     <h3  class="font_typ_cod">Digite o Código</h3>  
+         </center>
+
+	<div class="border-input">
+
+		<input type="text" maxlength="7" OnKeyPress="formatar('#-#-#-#', this)" id="cod" style="width: 200px; height: 55px; text-align: center; color: #7c6249; padding-bottom: 5px;" placeholder="-  -  -  -" autofocus>
+	</div>   
+	</center> 
+
+
+<div class="block">
+  <p class="row">
+
+   <center> 
+   	<button class=" button button-big button-fill" style="width: 120px; height: 70px; background-color: #7c6249; font-size: 20px" onclick="valida()">Buscar
+   	</button> 
+
+   </center>
+  </p>
+ 
+</div>
+
+<a style="display: none;" href="#" data-popup=".popup-services" id="button_busca" class="link popup-open"></a>
+   <div class="popup popup-services" id="popup_feed">
+  <div data-page="index" class="page">  
+        <div class="page-content">
+            <!-- codigo da pagina -->
+   
+      <!-- Close Popup -->
+      <p><a class="link popup-close" href="#">Novo Código</a></p>
+   Nós somos a equipe SESI  ATHENA da cidade de Agudos, em São Paulo.
+<br>
+Estamos aqui para falarmos de nosso projeto, o NUTRIBOT!
+<br>
+Ele atende a ODS 2 da Agenda 2030 pois busca acabar com a fome, alcançar a segurança alimentar, a melhoria da nutrição e ainda promove a agricultura sustentável.
+<br>
+Com pesquisas realizadas em vários bairros da cidade, concluímos que muito precisa ser feito em prol da promoção da conscientização e melhoria da nutrição de famílias.
+<br>
+Descobrimos ainda, de acordo com a Organização Mundial de Saúde, que as crianças no Brasil são classificadas como subnutridas e isso se dá devido a chamada fome oculta.
+<br>
+Pensando nisso é que desenvolvemos o NUTRIBOT para que através de sistemas de tomada de decisão e mecanismos similares a uma vending machine forneça sementes  de frutas, verduras e legumes e ainda receitas que tragam a melhoria da nutrição de bebês e crianças.
+<br>
+   Nós somos a equipe SESI  ATHENA da cidade de Agudos, em São Paulo.
+<br>
+Estamos aqui para falarmos de nosso projeto, o NUTRIBOT!
+<br>
+Ele atende a ODS 2 da Agenda 2030 pois busca acabar com a fome, alcançar a segurança alimentar, a melhoria da nutrição e ainda promove a agricultura sustentável.
+<br>
+Com pesquisas realizadas em vários bairros da cidade, concluímos que muito precisa ser feito em prol da promoção da conscientização e melhoria da nutrição de famílias.
+<br>
+Descobrimos ainda, de acordo com a Organização Mundial de Saúde, que as crianças no Brasil são classificadas como subnutridas e isso se dá devido a chamada fome oculta.
+<br>
+Pensando nisso é que desenvolvemos o NUTRIBOT para que através de sistemas de tomada de decisão e mecanismos similares a uma vending machine forneça sementes  de frutas, verduras e legumes e ainda receitas que tragam a melhoria da nutrição de bebês e crianças.
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+    <script>
+    	 var app = new Framework7();
+    	
+    	document.getElementById('a').innerHTML = 'Buscar';
+    	function formatar(mascara, documento){
+			  var i = documento.value.length;
+			  var saida = mascara.substring(0,1);
+			  var texto = mascara.substring(i)
+			  
+			  if (texto.substring(0,1) != saida){
+			            documento.value += texto.substring(0,1);
+			  }
+			}
+		function valida () {
+			var char = document.getElementById('cod').value;			
+			
+			if (char.length < 7) {
+			   alert('Digite os 4 Dígitos');	
+			
+			} else {
+				document.getElementById('button_busca').click();
+			}
+		}	
+
+
+</script>
+    </body>
+</html>
