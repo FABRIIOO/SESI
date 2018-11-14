@@ -155,6 +155,8 @@
 			$.ajax({
 				url : "http://nutribot.requestwf.com.br/request.php",
 				type : 'post',
+				dataType:"json",
+    				crossDomain: true,
 					data : {
 						"x2" : cod2,
 						"x3" : cod3,
